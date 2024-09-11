@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Key : MonoBehaviour
@@ -9,10 +10,14 @@ public class Key : MonoBehaviour
     public float frequency = 1f;
     public float magnitude = 1f;
 
+    public DoorMove door;
+
+    private MoveToClick _player;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        _player = FindObjectOfType<MoveToClick>();
     }
 
     // Update is called once per frame
@@ -24,5 +29,15 @@ public class Key : MonoBehaviour
         float yOffset = Mathf.Cos(Time.time * frequency) * magnitude;
 
         transform.position += new Vector3(0, yOffset, 0) * Time.deltaTime;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == _player.gameObject)
+        {
+            door.unlockDoor = true;
+            Destroy(gameObject);
+        }
     }
 }

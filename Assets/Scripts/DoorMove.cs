@@ -16,7 +16,7 @@ public class DoorMove : MonoBehaviour
     void Start()
     {
         _closedPosition = transform.position;
-        _openPosition = transform.position + new Vector3(0f, -4f, 0f);
+        _openPosition = transform.position + new Vector3(0f, -5f, 0f);
     }
 
     // Update is called once per frame
