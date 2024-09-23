@@ -10,7 +10,9 @@ public class Key : MonoBehaviour
     public float frequency = 1f;
     public float magnitude = 1f;
 
-    public DoorMove door;
+    bool keysAreAllOff = false;
+    public GameObject[] keys;
+    public DoorMove[] door;
 
     private MoveToClick _player;
 
@@ -36,8 +38,28 @@ public class Key : MonoBehaviour
     {
         if (other.gameObject == _player.gameObject)
         {
-            door.unlockDoor = true;
-            Destroy(gameObject);
+
+            this.gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < keys.Length; i++)
+        {
+            if (keys[i].activeSelf == true)
+            {
+                return;
+            }
+            keysAreAllOff = true;
+        }
+
+        if (keysAreAllOff)
+        {
+            if (other.gameObject == _player.gameObject)
+            {
+                for (int i = 0; i < door.Length; i++)
+                {
+                    door[i].unlockDoor = true;
+                }
+            }
         }
     }
 }

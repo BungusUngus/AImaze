@@ -26,7 +26,7 @@ public class Monster : MonoBehaviour
 
         //holds raycast on monster position and tells us the direction to the player and what the raycast is hitting aswell as the distance of the actual raycast
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, dirToPlayer, out hit ,30f))
+        if (Physics.Raycast(transform.position, dirToPlayer, out hit, 30f))
         {
             //if raycast hits play transform trigger Monster to follow to player destination
             if (hit.transform == _player.transform)
@@ -49,6 +49,12 @@ public class Monster : MonoBehaviour
             randomPosition = new Vector3(randomPosition.x, 0, randomPosition.y);
             _agent.destination = transform.position + randomPosition;
         }
-       
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
