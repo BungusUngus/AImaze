@@ -441,111 +441,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27205903}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &41402275
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 41402276}
-  - component: {fileID: 41402279}
-  - component: {fileID: 41402278}
-  - component: {fileID: 41402277}
-  m_Layer: 0
-  m_Name: Internal walls (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &41402276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41402275}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.97007, y: 0, z: 15.349841}
-  m_LocalScale: {x: 0.6001827, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2099109236}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &41402277
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41402275}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &41402278
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41402275}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 39ea0b16f1716154aa3a0df8debc0238, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &41402279
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41402275}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &45602321
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +477,14 @@ MonoBehaviour:
   speed: 5
   isOpen: 0
   unlockDoor: 0
+  lowerDistance: -5
+  keys:
+  - {fileID: 1288365726}
+  - {fileID: 1769644227}
+  - {fileID: 148859062}
+  - {fileID: 652149259}
+  - {fileID: 1633987604}
+  - {fileID: 209171633}
 --- !u!208 &45602323
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -1559,13 +1462,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 1288365726}
-  - {fileID: 1633987604}
-  - {fileID: 209171633}
-  - {fileID: 1769644227}
-  - {fileID: 148859062}
-  - {fileID: 652149259}
   door:
   - {fileID: 276555534}
   - {fileID: 45602322}
@@ -2320,13 +2216,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 1288365726}
-  - {fileID: 1633987604}
-  - {fileID: 209171633}
-  - {fileID: 1769644227}
-  - {fileID: 148859062}
-  - {fileID: 652149259}
   door:
   - {fileID: 276555534}
   - {fileID: 45602322}
@@ -2937,7 +2826,7 @@ Transform:
   m_GameObject: {fileID: 276555529}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 34.343834, y: 2.5000026, z: 13.7698}
+  m_LocalPosition: {x: 34.343834, y: 2.4924, z: 13.7698}
   m_LocalScale: {x: 9.526344, y: 5, z: 0.80000025}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2958,6 +2847,14 @@ MonoBehaviour:
   speed: 5
   isOpen: 0
   unlockDoor: 0
+  lowerDistance: 5.1
+  keys:
+  - {fileID: 1288365726}
+  - {fileID: 1769644227}
+  - {fileID: 148859062}
+  - {fileID: 652149259}
+  - {fileID: 1633987604}
+  - {fileID: 209171633}
 --- !u!208 &276555535
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -3009,12 +2906,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 310351178}
-  - {fileID: 1503703107}
-  - {fileID: 792208661}
-  - {fileID: 786774314}
-  - {fileID: 426710371}
   door:
   - {fileID: 1474781681}
 --- !u!135 &310351180
@@ -4105,12 +3996,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 310351178}
-  - {fileID: 1503703107}
-  - {fileID: 792208661}
-  - {fileID: 786774314}
-  - {fileID: 426710371}
   door:
   - {fileID: 1474781681}
 --- !u!135 &426710373
@@ -5141,13 +5026,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 1288365726}
-  - {fileID: 1633987604}
-  - {fileID: 209171633}
-  - {fileID: 1769644227}
-  - {fileID: 148859062}
-  - {fileID: 652149259}
   door:
   - {fileID: 276555534}
   - {fileID: 45602322}
@@ -5960,12 +5838,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 310351178}
-  - {fileID: 1503703107}
-  - {fileID: 792208661}
-  - {fileID: 786774314}
-  - {fileID: 426710371}
   door:
   - {fileID: 1474781681}
 --- !u!135 &786774316
@@ -6089,12 +5961,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 310351178}
-  - {fileID: 1503703107}
-  - {fileID: 792208661}
-  - {fileID: 786774314}
-  - {fileID: 426710371}
   door:
   - {fileID: 1474781681}
 --- !u!135 &792208663
@@ -7990,13 +7856,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 1288365726}
-  - {fileID: 1633987604}
-  - {fileID: 209171633}
-  - {fileID: 1769644227}
-  - {fileID: 148859062}
-  - {fileID: 652149259}
   door:
   - {fileID: 276555534}
   - {fileID: 45602322}
@@ -8962,6 +8821,13 @@ MonoBehaviour:
   speed: 5
   isOpen: 0
   unlockDoor: 0
+  lowerDistance: -5
+  keys:
+  - {fileID: 310351178}
+  - {fileID: 426710371}
+  - {fileID: 1503703107}
+  - {fileID: 792208661}
+  - {fileID: 786774314}
 --- !u!208 &1474781682
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9204,12 +9070,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 310351178}
-  - {fileID: 1503703107}
-  - {fileID: 792208661}
-  - {fileID: 786774314}
-  - {fileID: 426710371}
   door:
   - {fileID: 1474781681}
 --- !u!135 &1503703109
@@ -9649,13 +9509,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 1288365726}
-  - {fileID: 1633987604}
-  - {fileID: 209171633}
-  - {fileID: 1769644227}
-  - {fileID: 148859062}
-  - {fileID: 652149259}
   door:
   - {fileID: 276555534}
   - {fileID: 45602322}
@@ -9908,10 +9761,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 35
-  m_Acceleration: 35
+  m_Speed: 10
+  m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 300
+  m_AngularSpeed: 1000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -10028,9 +9881,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672031312}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -10361,13 +10214,6 @@ MonoBehaviour:
   rotationSpeed: 40
   frequency: 1
   magnitude: 1
-  keys:
-  - {fileID: 1288365726}
-  - {fileID: 1633987604}
-  - {fileID: 209171633}
-  - {fileID: 1769644227}
-  - {fileID: 148859062}
-  - {fileID: 652149259}
   door:
   - {fileID: 276555534}
   - {fileID: 45602322}
@@ -10505,111 +10351,6 @@ MonoBehaviour:
   m_Center: {x: 0, y: 1, z: 0}
   m_Area: 3
   m_AffectedAgents: ffffffff
---- !u!1 &1829128406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1829128407}
-  - component: {fileID: 1829128410}
-  - component: {fileID: 1829128409}
-  - component: {fileID: 1829128408}
-  m_Layer: 0
-  m_Name: Internal walls (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1829128407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829128406}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.3201554, y: 0, z: 17.2007}
-  m_LocalScale: {x: 4.7017217, y: 1, z: 0.1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2099109236}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &1829128408
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829128406}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1829128409
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829128406}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 39ea0b16f1716154aa3a0df8debc0238, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1829128410
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829128406}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1836987787
 GameObject:
   m_ObjectHideFlags: 0
@@ -11062,7 +10803,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -11089,10 +10830,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 30
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -11873,7 +11614,6 @@ Transform:
   - {fileID: 196299613}
   - {fileID: 1209398767}
   - {fileID: 579516881}
-  - {fileID: 1829128407}
   - {fileID: 47186095}
   - {fileID: 753240356}
   - {fileID: 168438739}
@@ -11897,7 +11637,6 @@ Transform:
   - {fileID: 549396221}
   - {fileID: 1705837191}
   - {fileID: 853712777}
-  - {fileID: 41402276}
   - {fileID: 1221068237}
   - {fileID: 339429919}
   - {fileID: 1294508684}

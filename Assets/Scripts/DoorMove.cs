@@ -9,14 +9,18 @@ public class DoorMove : MonoBehaviour
     public bool isOpen = false;
     public bool unlockDoor = false;
 
+    public float lowerDistance = 5f;
+
     Vector3 _closedPosition = Vector3.zero;
     Vector3 _openPosition = Vector3.zero;
+
+    public GameObject[] keys;
 
     // Start is called before the first frame update
     void Start()
     {
         _closedPosition = transform.position;
-        _openPosition = transform.position + new Vector3(0f, -5f, 0f);
+        _openPosition = transform.position + new Vector3(0f, -lowerDistance, 0f);
     }
 
     // Update is called once per frame
@@ -32,6 +36,20 @@ public class DoorMove : MonoBehaviour
             isOpen = true;
             unlockDoor = false;
         }
+    }
+    
+    public bool CheckDoor()
+    {
+        for (int i = 0; i < keys.Length; i++)
+        {
+            if (keys[i].activeSelf == true)
+            {
+                return false;
+            }
+        }
+
+        unlockDoor = true;
+        return true;
     }
 }
 
